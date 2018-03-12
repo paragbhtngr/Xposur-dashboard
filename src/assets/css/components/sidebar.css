@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Play:700");
+.sidebar {
+  height: 120vh;
+  width: 250px;
+  background: #222222;
+  position: fixed; }
+  .sidebar .sidebar-menu {
+    list-style: none;
+    padding-left: 0px; }
+    .sidebar .sidebar-menu .sidebar-menu-item {
+      font-size: 20px;
+      display: flex;
+      align-items: center; }
+      .sidebar .sidebar-menu .sidebar-menu-item a {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        padding: 14px 20px 14px 28px;
+        height: 100%;
+        width: 100%;
+        color: #cccccc; }
+        .sidebar .sidebar-menu .sidebar-menu-item a:hover {
+          color: #ffffff; }
+      .sidebar .sidebar-menu .sidebar-menu-item .svg-inline--fa {
+        width: 20px;
+        text-align: center; }
+      .sidebar .sidebar-menu .sidebar-menu-item p {
+        padding-left: 14px;
+        margin-bottom: 0px; }
+      .sidebar .sidebar-menu .sidebar-menu-item.active {
+        background: #333333; }
+        .sidebar .sidebar-menu .sidebar-menu-item.active p {
+          font-weight: bold; }

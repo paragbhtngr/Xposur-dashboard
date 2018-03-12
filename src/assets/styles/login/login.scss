@@ -1,0 +1,23 @@
+.login-container {
+    background-image: url('../../images/login-bg.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    padding: 50px;
+    max-width: 400px;
+    text-align: center;
+    .logo {
+        height: 64px;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .input-group {
+        margin-bottom: 20px;
+    }
+}

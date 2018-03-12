@@ -1,0 +1,43 @@
+@import '../variables';
+
+.sidebar {
+    height: 120vh;
+    width: 250px;
+    background: $black-dark-color;
+    position: fixed;
+    .sidebar-menu {
+        list-style: none;
+        padding-left: 0px;
+        .sidebar-menu-item {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            a {
+                display: flex;
+                text-decoration: none;
+                align-items: center;
+                padding: 14px 20px 14px 28px;
+                height: 100%;
+                width: 100%;
+                color: $grey-dark-color;
+                &:hover {
+                    color: $white-color;
+                }
+            }
+            .svg-inline--fa {
+                width: 20px;
+                text-align: center;
+            }
+            p {
+                padding-left: 14px;
+                margin-bottom: 0px;
+            }
+            &.active {
+                background: $black-color;
+                p {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

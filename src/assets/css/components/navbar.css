@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Play:700");
+.navbar.navbar-default {
+  margin-bottom: 0px;
+  border: none; }
+  .navbar.navbar-default:before {
+    content: '';
+    background-color: #222222;
+    width: 100%;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    height: 200px; }
+  .navbar.navbar-default .container {
+    width: 100%; }
+    .navbar.navbar-default .container .navbar-brand {
+      width: 250px;
+      font-size: 22px;
+      display: flex; }
+      .navbar.navbar-default .container .navbar-brand .logo {
+        height: 20px;
+        padding-right: 15px;
+        padding-left: 10px; }
+    .navbar.navbar-default .container .xposur-content {
+      font-weight: bold; }
+  .navbar.navbar-default .nav-dropdown {
+    position: relative; }
+    .navbar.navbar-default .nav-dropdown .svg-inline--fa {
+      width: 25px; }
+    .navbar.navbar-default .nav-dropdown .badge {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      border-radius: 0px;
+      height: 15px;
+      padding: 1px 4px;
+      font-size: 12px;
+      background-color: #ff0039; }

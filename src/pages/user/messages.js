@@ -12,44 +12,23 @@ class Login extends Component {
         super(props);
         
         this.state = {
+            minimize: false
         }
+
     }
+
+    toggleSidebar = () => {
+        this.setState({minimize: !this.state.minimize})
+    }
+
 
     render() {
         return (
             <div>
-                <Navbar/>
-                <Sidebar userType="user" active="messages"/>
-                <div className="content-wrapper">
+                <Navbar toggleSidebar={this.toggleSidebar} minimized={this.state.minimize}/>
+                <Sidebar userType="user" active="messages" minimized={this.state.minimize}/>
+                <div className={"content-wrapper " + (this.state.minimize ? "maximized" : "")}>
                     <FeelingToday/>
-                    <div className="experiences">
-                        <Panel className="previous-experiences">
-                            <Panel.Body>
-                                <div className="header">
-                                    <h3 className="title">Previous Experiences</h3>
-                                    <Button bsStyle="primary" bsSize="small">See all</Button>
-                                </div>
-                            </Panel.Body>
-                        </Panel>
-                        <Panel className="upcoming-experiences">
-                            <Panel.Body>
-                                <div className="header">
-                                    <h3 className="title">Upcoming Experiences</h3>
-                                    <Button bsStyle="primary" bsSize="small">See all</Button>
-                                </div>
-                            </Panel.Body>
-                        </Panel>
-                    </div>
-                    <div className="recommended-experiences-container">
-                        <Panel className="recommended-experiences">
-                            <Panel.Body>
-                                <div className="header">
-                                    <h3 className="title">Recommended Experiences</h3>
-                                    <Button bsStyle="primary" bsSize="small">See all</Button>
-                                </div>
-                            </Panel.Body>
-                        </Panel>
-                    </div>
                 </div>
             </div>
         );

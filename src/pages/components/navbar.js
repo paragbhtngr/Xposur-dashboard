@@ -11,6 +11,9 @@ class Login extends Component {
         super(props);
         
         this.state = {
+            newNotifications: 3,
+            newMessages: 0,
+            newFeedback: 1,
         }
     }
 
@@ -19,7 +22,7 @@ class Login extends Component {
             <Navbar collapseOnSelect fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
-                    <a href="#brand"><img className="logo" src={logo} alt="logo"/> Dashboard</a>
+                    <a onClick={this.props.toggleSidebar}><img className={"logo " + (this.props.minimized ? "minimized" : "")} src={logo} alt="logo"/> Dashboard</a>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
@@ -27,34 +30,46 @@ class Login extends Component {
                     <Nav>
                     </Nav>
                     <Nav pullRight>
-                        <NavDropdown eventKey={1} noCaret title={
-                            <div className="nav-dropdown">
-                                <span><i className="fas fa-globe"></i></span>
-                                <Badge>3</Badge>
-                            </div>
-                        }>  
+                        <NavDropdown eventKey={1} id="notifications" noCaret title={
+                                <div className="nav-dropdown">
+                                    <span><i className="fas fa-globe"></i></span>
+                                    {this.state.newNotifications > 0 ? (
+                                            <Badge>{this.state.newNotifications}</Badge>
+                                        ) : ( null )}
+                                </div>
+                            }
+                            onClick={() => {this.setState({newNotifications: 0})}}
+                            >  
                             <div style={{paddingLeft: '20px', marginTop: '10px', marginBottom: '10px', fontWeight: 'bold'}}>Notifications</div>
                             <MenuItem eventKey={1.1}>Action</MenuItem>
                             <MenuItem eventKey={1.2}>Another action</MenuItem>
                             <MenuItem eventKey={1.3}>Something else here</MenuItem>
                         </NavDropdown>
-                        <NavDropdown eventKey={2} noCaret title={
-                            <div className="nav-dropdown">
-                                <span><i className="fas fa-comment"></i></span>
-                                {/* <Badge>2</Badge> */}
-                            </div>
-                        }>  
+                        <NavDropdown eventKey={2} id="messages" noCaret title={
+                                <div className="nav-dropdown">
+                                    <span><i className="fas fa-comment"></i></span>
+                                    {this.state.newMessages > 0 ? (
+                                            <Badge>{this.state.newMessages}</Badge>
+                                        ) : ( null )}
+                                </div>
+                            }
+                            onClick={() => {this.setState({newMessages: 0})}}
+                            >  
                             <div style={{paddingLeft: '20px', marginTop: '10px', marginBottom: '10px', fontWeight: 'bold'}}>Messages</div>
                             <MenuItem eventKey={2.1}>Action</MenuItem>
                             <MenuItem eventKey={2.2}>Another action</MenuItem>
                             <MenuItem eventKey={2.3}>Something else here</MenuItem>
                         </NavDropdown>
-                        <NavDropdown eventKey={3} id="basic-nav-dropdown" noCaret title={
-                            <div className="nav-dropdown">
-                                <span><i className="fas fa-edit"></i></span>
-                                <Badge>2</Badge>
-                            </div>
-                        }>
+                        <NavDropdown eventKey={3} id="feedback" noCaret title={
+                                <div className="nav-dropdown">
+                                    <span><i className="fas fa-edit"></i></span>
+                                    {this.state.newFeedback > 0 ? (
+                                            <Badge>{this.state.newFeedback}</Badge>
+                                        ) : ( null )}
+                                </div>
+                            } 
+                            onClick={() => {this.setState({newFeedback: 0})}}
+                            >
                             <div style={{paddingLeft: '20px', marginTop: '10px', marginBottom: '10px', fontWeight: 'bold'}}>Feedback</div>
                             <MenuItem eventKey={3.1}>Action</MenuItem>
                             <MenuItem eventKey={3.2}>Another action</MenuItem>

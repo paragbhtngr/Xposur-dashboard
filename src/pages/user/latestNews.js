@@ -12,15 +12,21 @@ class Login extends Component {
         super(props);
         
         this.state = {
+            minimize: false
         }
+
+    }
+
+    toggleSidebar = () => {
+        this.setState({minimize: !this.state.minimize})
     }
 
     render() {
         return (
             <div>
-                <Navbar/>
-                <Sidebar userType="user" active="latestnews"/>
-                <div className="content-wrapper">
+                <Navbar toggleSidebar={this.toggleSidebar} minimized={this.state.minimize}/>
+                <Sidebar userType="user" active="latestnews" minimized={this.state.minimize}/>
+                <div className={"content-wrapper " + (this.state.minimize ? "maximized" : "")}>
                     <FeelingToday/>
                     <div className="experiences">
                         <Panel className="previous-experiences">

@@ -6,7 +6,11 @@ body {
     .content-wrapper {
         margin-left: 250px;
         margin-top: 50px;
+        transition: all 0.25s ease; 
         background: $grey-color;
+        &.maximized {
+            margin-left: 70px;
+        }
         .feeling-today {
             background-color: $primary-color;
             border: none;
@@ -18,6 +22,7 @@ body {
             p {
                 margin-bottom: 0px;
                 color: $white-color;
+                
             }
             .stars-container {
                 display: flex;
@@ -151,9 +156,89 @@ body {
     display: flex;
     justify-content: flex-start;
     margin: 0px 25px;
-    .panel {
-        margin: 10px;
-        flex: 1;
+    .xperience-item {
+        width: 50%;
+        padding: 10px;
+        .panel-default {
+            height: 100%;
+            margin-bottom: 5px;
+        }
+        a {
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            .image-container {
+                position: relative;
+                image {
+                    width: 100%;
+                }
+                .date {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    background: $primary-color;
+                    width: 42px;
+                    height: 42px;
+                    padding: 6px 0;
+                    border-radius: 100%;
+                    color: white;
+                    font-weight: 700;
+                    text-align: center;
+                    .day {
+                        font-size: 15px;
+                        line-height: 1;
+                    }
+                    .month {
+                        font-size: 11px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            &:hover {
+                .item-info {
+                    height: 100%;
+                    margin-top: 0px;
+                    padding-top: 15px;
+                }
+            }
+            .item-info {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                background: white;
+                padding: 5px 10px;
+                margin: 0px;
+                overflow: hidden;
+                transition: all 0.25s ease; 
+                height: 5em;
+                .item-info-display {
+                    height: 5em;
+                    z-index: 10;
+                    .text {
+                        margin: 0px;
+                    }
+                    .title {
+                        font-weight: bold;
+                        display: block;
+                        color: black;
+                        font-size: 20px;
+                        line-height: 1;
+                    }
+                    .trainer {
+                        font-size: 14px;
+                        color: black;
+                    }
+                }
+                .item-info-more {
+                    height: calc(100% - 5em);
+                    color: $black-color;
+                    .title {
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+        }
     }
 }
 
@@ -178,4 +263,110 @@ body {
             padding: 0px;
         }
     }
+}
+
+.event-header {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    &:before {
+        content: '';
+        background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+        height: 150px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    img {
+        width: 100%;
+    }
+    .title {
+        position: absolute;
+        bottom: 0;
+        font-weight: bold;
+        padding-left: 30px;
+        color: #ffffff;
+    }
+}
+.xperience-page {
+    .description-section {
+        padding: 10px;
+        min-width: 600px;
+        flex: 2;
+        .description-section-panel {
+            padding: 30px;
+        }
+    } 
+    
+    .content-block {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row;
+    }
+    
+    .feedback-content {
+        margin-top: 10px;
+        .feedback-comment {
+            p {
+                margin-bottom: 0px;
+            }
+            .username {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .sidebar-right {
+        flex: 1;
+        min-width: 300px;
+        padding: 10px;
+        .sidebar-right-panel {
+            padding: 30px;
+            margin-bottom: 0px;
+            .date, .time {
+                font-weight: bold;
+                font-size: 1.5em;
+                line-height: 1;
+            }
+
+            .map-responsive{
+                overflow:hidden;
+                padding-bottom:56.25%;
+                position:relative;
+                margin-top: 10px;
+                height:0;
+                iframe{
+                    left:0;
+                    top:0;
+                    height:100%;
+                    width:100%;
+                    position:absolute;
+                }
+            }
+
+            .tags {
+                margin-top: 5px;
+            }
+
+            .tag-badge {
+                margin-right: 5px;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+.smallcaps{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-weight: 1em;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    display: block;
+}
+
+.grey {
+    opacity: 0.5;
 }

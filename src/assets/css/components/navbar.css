@@ -18,8 +18,12 @@
       display: flex; }
       .navbar.navbar-default .container .navbar-brand .logo {
         height: 20px;
-        padding-right: 15px;
-        padding-left: 10px; }
+        margin-right: 24px;
+        margin-left: 10px;
+        transition: all 0.25s ease;
+        transform-origin: 50% 50% 0%; }
+        .navbar.navbar-default .container .navbar-brand .logo.minimized {
+          transform: rotate(135deg); }
     .navbar.navbar-default .container .xposur-content {
       font-weight: bold; }
   .navbar.navbar-default .nav-dropdown {
@@ -35,3 +39,5 @@
       padding: 1px 4px;
       font-size: 12px;
       background-color: #ff0039; }
+  .navbar.navbar-default .dropdown.open .svg-inline--fa {
+    color: #707070; }

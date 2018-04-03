@@ -16,7 +16,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <div className="sidebar">
+                <div className={"sidebar " + (this.props.minimized ? "minimized" : "")}>
                     {
                         this.props.userType === "user" ? (
                             <ul className="sidebar-menu">

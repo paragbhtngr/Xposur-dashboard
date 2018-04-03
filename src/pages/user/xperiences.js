@@ -12,16 +12,21 @@ export default class Xperiences extends Component {
         super(props);
         
         this.state = {
-            xperienceId: this.props.match.params.xperienceId
+            minimize: false
         }
+
+    }
+
+    toggleSidebar = () => {
+        this.setState({minimize: !this.state.minimize})
     }
 
     render() {
         return (
             <div>
-                <Navbar/>
-                <Sidebar userType="user" active="xperiences"/>
-                <div className="content-wrapper">
+                <Navbar toggleSidebar={this.toggleSidebar} minimized={this.state.minimize}/>
+                <Sidebar userType="user" active="xperiences" minimized={this.state.minimize}/>
+                <div className={"content-wrapper " + (this.state.minimize ? "maximized" : "")}>
                 </div>
             </div>
         );

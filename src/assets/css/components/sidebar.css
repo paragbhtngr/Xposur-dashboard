@@ -3,7 +3,13 @@
   height: 120vh;
   width: 250px;
   background: #222222;
-  position: fixed; }
+  position: fixed;
+  transition: all 0.25s ease; }
+  .sidebar.minimized {
+    overflow: hidden;
+    width: 70px; }
+    .sidebar.minimized .sidebar-menu .sidebar-menu-item p {
+      opacity: 0; }
   .sidebar .sidebar-menu {
     list-style: none;
     padding-left: 0px; }
@@ -25,8 +31,10 @@
         width: 20px;
         text-align: center; }
       .sidebar .sidebar-menu .sidebar-menu-item p {
-        padding-left: 14px;
-        margin-bottom: 0px; }
+        padding-left: 24px;
+        margin-bottom: 0px;
+        white-space: nowrap;
+        transition: all 0.25s ease; }
       .sidebar .sidebar-menu .sidebar-menu-item.active {
         background: #333333; }
         .sidebar .sidebar-menu .sidebar-menu-item.active p {

@@ -20,8 +20,13 @@
             display: flex;
             .logo {
                 height: 20px;
-                padding-right: 15px;
-                padding-left: 10px;
+                margin-right: 24px;
+                margin-left: 10px;            
+                transition: all 0.25s ease; 
+                transform-origin: 50% 50% 0%;
+                &.minimized {
+                    transform: rotate(135deg);
+                }
             }
         }
         .xposur-content {
@@ -42,6 +47,13 @@
             padding: 1px 4px;
             font-size: 12px;
             background-color: $danger-color;
+        }
+    }
+    .dropdown {
+        &.open {
+            .svg-inline--fa {
+                color: $black-light-color
+            }
         }
     }
 }

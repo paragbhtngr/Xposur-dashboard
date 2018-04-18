@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import {FormGroup, FormControl, InputGroup, Button, Panel, PanelGroup, Badge, Well } from 'react-bootstrap';
+import {FormGroup, FormControl, InputGroup, Button, Panel, PanelGroup, Badge, Well , TabContent} from 'react-bootstrap';
 import Moment from 'react-moment';
 import Sidebar from '../components/sidebar';
 import Navbar from '../components/navbar';
@@ -68,7 +68,19 @@ export default class XperiencePage extends Component {
                                 <p>{this.state.data.xperienceDescription}</p>
                                 <span className="smallcaps grey">TRAINER: {this.state.data.trainer}</span>
                                 <p>{this.state.data.trainerProfile}</p>
-                                <span className="smallcaps grey">FEEDBACK</span>
+                                <span className="smallcaps grey">TRAINER FEEDBACK</span>
+                                <div className="feedback-content">
+                                    <Well className="feedback-comment">
+                                        <p>Some dummy data about the Trainer's feedback should go here</p>
+                                    </Well>
+                                </div>
+                                <span className="smallcaps grey">YOUR FEEDBACK</span>
+                                <div className="feedback-content">
+                                    <Well className="feedback-comment">
+                                        <p>Some dummy data about from the user's feedback should go here</p>
+                                    </Well>
+                                </div>
+                                <span className="smallcaps grey">PUBLIC FEEDBACK</span>
                                 <div className="feedback-content">
                                     {
                                         this.state.data.feedback.map((feedback) => {

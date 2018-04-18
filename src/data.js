@@ -431,18 +431,22 @@ var data = {
         {
             text: "Example of an Unread notification",
             unread: true,
+            id: 1,
             date: '2018-04-20 20:38:23',
         }, {
             text: "Example of a read notification",
             unread: false,
+            id: 2,
             date: '2018-04-18 15:32:12',
         }, {
             text: "Example of a read notification",
             unread: false,
+            id: 3,
             date: '2018-04-18 14:24:35',
         }, {
             text: "Example of a read notification",
             unread: false,
+            id: 4,
             date: '2018-04-17 12:21:14',
         },
     ],
@@ -450,26 +454,31 @@ var data = {
         {   
             text: "Example of an Unread message",
             from: "Jennifer",
+            fromProfilePic: "May.jpg",
             unread: true,
             date: '2018-04-20 20:38:23',
         }, {
             text: "Example of a read message",
             from: "Kevin",
+            fromProfilePic: "Sameer.jpg",
             unread: false,
             date: '2018-04-18 15:32:12',
         }, {
             text: "Example of a read message",
             from: "Reggie",
+            fromProfilePic: "David.jpg",
             unread: false,
             date: '2018-04-18 14:24:35',
         }, {
             text: "Example of a read message",
             from: "Kaizheng",
+            fromProfilePic: "Raj.jpg",
             unread: false,
             date: '2018-04-17 12:21:14',
         }, {
             text: "Example of a read message",
             from: "Wan Wei",
+            fromProfilePic: "May.jpg",
             unread: false,
             date: '2018-04-05 16:12:25',
         },

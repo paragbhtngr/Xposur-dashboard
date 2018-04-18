@@ -5,7 +5,10 @@ import { NavLink } from 'react-router-dom';
 import {FormGroup, FormControl, InputGroup, Button, ListGroup} from 'react-bootstrap';
 import '../../assets/css/components/sidebar.css';
 
-class Login extends Component {
+
+import data from '../../data';
+
+class Sidebar extends Component {
     constructor(props) {
         super(props);
         
@@ -65,4 +68,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Sidebar;

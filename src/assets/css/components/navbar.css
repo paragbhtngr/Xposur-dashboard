@@ -41,3 +41,39 @@
       background-color: #ff0039; }
   .navbar.navbar-default .dropdown.open .svg-inline--fa {
     color: #707070; }
+
+.menu-header {
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px; }
+
+.menu-item {
+  border-top: 1px solid #f5f5f5; }
+  .menu-item .msg-sender {
+    font-weight: bold; }
+  .menu-item.unread {
+    background-color: rgba(26, 110, 204, 0.1); }
+    .menu-item.unread .notification-text, .menu-item.unread .msg-sender {
+      font-weight: bold; }
+  .menu-item .notification-text, .menu-item .msg-text, .menu-item .msg-sender {
+    margin: 0px;
+    line-height: 1.2; }
+  .menu-item .notification-time, .menu-item .msg-time {
+    opacity: 0.7;
+    line-height: 1;
+    font-size: 14px; }
+  .menu-item .img-container {
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    padding-right: 20px;
+    vertical-align: top; }
+    .menu-item .img-container img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50px; }
+  .menu-item .text-container {
+    margin-top: 10px;
+    display: inline-block; }

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Play:700");
+.message-container {
+  min-height: calc(100vh - 107px);
+  background: purple;
+  display: flex;
+  flex-direction: row; }
+  .message-container .messages-sidebar {
+    background: #e6e6e6;
+    min-width: 300px;
+    width: 30%; }
+    .message-container .messages-sidebar .messages {
+      padding-left: 0; }
+  .message-container .message-window {
+    background: white;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    position: relative; }
+
+.message-item {
+  border-top: 1px solid #f5f5f5;
+  list-style: none;
+  padding-left: 15px; }
+  .message-item .msg-text {
+    opacity: 0.8; }
+  .message-item.unread .notification-text, .message-item.unread .msg-sender, .message-item.unread .msg-text {
+    font-weight: bold; }
+  .message-item.active {
+    background-color: rgba(26, 110, 204, 0.1); }
+  .message-item .notification-text, .message-item .msg-text, .message-item .msg-sender {
+    margin: 0px;
+    line-height: 1.2; }
+  .message-item .notification-time, .message-item .msg-time {
+    opacity: 0.7;
+    line-height: 1;
+    font-size: 14px; }
+  .message-item .img-container {
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    padding-right: 20px;
+    vertical-align: top; }
+    .message-item .img-container img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50px; }
+  .message-item .text-container {
+    margin-top: 10px;
+    display: inline-block; }
+
+.message-box-container {
+  display: flex;
+  justify-content: flex-start; }
+  .message-box-container.to {
+    justify-content: flex-end; }
+    .message-box-container.to:first-child {
+      padding-top: 50px; }
+    .message-box-container.to .message-box {
+      background: #1a6ecc; }
+      .message-box-container.to .message-box .msg-time, .message-box-container.to .message-box span {
+        color: white; }
+  .message-box-container .message-box {
+    background: #e6e6e6;
+    margin: 10px;
+    margin-bottom: 0px;
+    padding: 5px 10px;
+    padding-right: 80px;
+    position: relative;
+    display: inline-block; }
+    .message-box-container .message-box .msg-time {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      opacity: 0.5; }
+
+.message-input {
+  position: absolute;
+  bottom: 0px;
+  margin: 0;
+  width: 100%;
+  height: 150px; }
+  .message-input textarea {
+    height: 150px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px; }

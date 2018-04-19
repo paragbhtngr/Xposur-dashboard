@@ -5,12 +5,36 @@ var data = {
             id: "01-01",
             trainer: "Ethan Seow",
             trainerProfile: "Ethan is a thought leader and maverick who wants to disrupt the self-help and psychotherapy industries with actual solutions to human issues most people have given up on. His expertise is rooted in the 5 years he spent in NUS Medical School specializing in psychiatry and psychology and the 5 years he spent running businesses afterwards. During these 10 years, he has given many talks, one of which was at TEDxNUS. He has also published an article that was featured next to Noam Chomsky’s.",
-            xperienceName: "Personal Clarity and Motivation",
-            thumbnail: "clarity.jpg",
+            xperienceName: "Cooking Class",
+            thumbnail: "food.jpg",
             location: "67 Ayer Rajah Crescent, Singapore 139950",
-            cost: 70,
+            cost: 200,
             time: '2018-04-18 17:30:00',
-            xperienceDescription: "Helping people address issues and finding their needs",
+            xperienceDescription: "Cooking 101",
+            needs: [{
+                need: "Primary",
+                description: [{
+                    label: "Nutritional Need",
+                    text: "what are the right things to eat"
+                }, {
+                    label: "Hygiene Needs",
+                    text: "how to keep your mind healthy"
+                }]
+            }, {
+                need: "Secondary",
+                description: [{
+                    label: "Cooking",
+                    text: "Creating something that you’ll enjoy"
+                }, {
+                    label: "Clearing your mind",
+                    text: "How to be focused in cooking"
+                }]
+            }, {
+                need: "Tertiary",
+                description: [{
+                    label: "Working in a kitchen"
+                }]
+            }],
             xperienceTags: ["coaching", "clarity", "lost", "primary", "secondary", "quaternary"],
             previousAttendees: [{
                     name: "May Skärsgard",
@@ -28,6 +52,17 @@ var data = {
                 }, {
                     name: "Jonathan Walker",
                     profilePic: "Jonathan.jpg",
+            }],
+            trainerFeedback: {
+                comments: [
+                    "Great energy with eagerness to learn",
+                    "Focused a lot on perfection, might have tertiary need management issues",
+                    "Open to new ideas and engages",
+                    "Once engaged, fully focus in the process",
+                    "Great sense of taste and prediction, a natural cook",
+            ]},
+            employeeFeedback: [{
+
             }],
             feedback: [{
                     rating: 5,
@@ -115,15 +150,15 @@ var data = {
                     comment: "Absolutely loved it! The world makes sense now."
             }],
             gallery: []
-        }, {
-            id: "01-04",
+        }, {   
+            id: "01-01",
             trainer: "Ethan Seow",
-            trainerProfile: "Something about inconsistent morality",
-            xperienceName: "Personal Clarity",
+            trainerProfile: "Ethan is a thought leader and maverick who wants to disrupt the self-help and psychotherapy industries with actual solutions to human issues most people have given up on. His expertise is rooted in the 5 years he spent in NUS Medical School specializing in psychiatry and psychology and the 5 years he spent running businesses afterwards. During these 10 years, he has given many talks, one of which was at TEDxNUS. He has also published an article that was featured next to Noam Chomsky’s.",
+            xperienceName: "Personal Clarity and Motivation",
             thumbnail: "clarity.jpg",
             location: "67 Ayer Rajah Crescent, Singapore 139950",
             cost: 70,
-            time: '2018-04-25 17:30:00',
+            time: '2018-04-18 17:30:00',
             xperienceDescription: "Helping people address issues and finding their needs",
             xperienceTags: ["coaching", "clarity", "lost", "primary", "secondary", "quaternary"],
             previousAttendees: [{
@@ -148,7 +183,7 @@ var data = {
                     user: "May",
                     comment: "Great workshop!"
                 }, {
-                    rating: 5,
+                    rating: 4,
                     user: "Sameer",
                     comment: "Absolutely loved it! The world makes sense now."
             }],
